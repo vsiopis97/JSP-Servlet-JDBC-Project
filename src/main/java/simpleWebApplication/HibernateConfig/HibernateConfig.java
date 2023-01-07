@@ -10,6 +10,7 @@ import org.hibernate.service.ServiceRegistry;
 
 import simpleWebApplication.User.*;
 
+//Hibernate configuration.xml commands class
 public class HibernateConfig{
 	private static SessionFactory sessionFactory;
 
