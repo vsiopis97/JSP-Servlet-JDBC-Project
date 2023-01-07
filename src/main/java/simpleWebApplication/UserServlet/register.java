@@ -27,6 +27,7 @@ public class register extends HttpServlet {
     	        response.sendRedirect("registerNewUser.jsp");
     	    }
 
+    //We use post method to insert the users into the database
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String uname=request.getParameter("Name");
