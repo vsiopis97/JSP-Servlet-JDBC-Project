@@ -7,6 +7,7 @@
 <title>Homepage</title>
 </head>
 <body>
+<div align="center">
 <h3>Choose an action:</h3>
   <p>Please click a button to redirect you to the page you wish to go to.</p>
 
@@ -21,7 +22,7 @@
     <form>
         <input type="button" id="idname" value = "Display Users" onclick="goToDisp()"/><br>
     </form>
-
+    </div>
     <script type="text/javascript">
         function goToReg(){
            window.location = "registerNewUser.jsp";

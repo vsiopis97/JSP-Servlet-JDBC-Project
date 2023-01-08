@@ -1,4 +1,4 @@
-package simpleWebApplication.UserServlet;
+package simpleWebApplication.RegisterServlet;
 /*
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,7 +11,7 @@ import simpleWebApplication.HibernateConfig.HibernateConfig;
 import simpleWebApplication.User.*;
 
 
-public class registerDao {
+public class RegisterDao {
 
 	
     //JDBC way

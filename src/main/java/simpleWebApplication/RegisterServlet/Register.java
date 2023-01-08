@@ -1,4 +1,4 @@
-package simpleWebApplication.UserServlet;
+package simpleWebApplication.RegisterServlet;
 
 import java.io.IOException;
 
@@ -14,11 +14,11 @@ import simpleWebApplication.User.User2;
 
 
 @WebServlet("/register")
-public class register extends HttpServlet {
+public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 
-    public register() {
+    public Register() {
 
     }
     
@@ -38,7 +38,7 @@ public class register extends HttpServlet {
 		String haddress=request.getParameter("Haddress");
 		User user = new User(uname,surname,gender,birthdate);
 		User2 user2 = new User2(waddress,haddress);
-		registerDao rDao = new registerDao();
+		RegisterDao rDao = new RegisterDao();
 	    rDao.insert(user,user2);
 	    
 	    RequestDispatcher dispatcher = request.getRequestDispatcher("registerNewUser.jsp");

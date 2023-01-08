@@ -7,6 +7,7 @@
 <title>Register New User</title>
 </head>
 <body>
+<div align="center">
 <p>Please fill all the mandatory fields before submitting.</p>
 
     <form name="Register User" action="register" method="post">
@@ -54,7 +55,7 @@
        <input type="submit" name="Submit" value="Submit">
        <input type="button" name="Return" value="Back" onclick="goToHome()">
     </form>
-    
+ </div>   
     <script type="text/javascript">
         function goToHome(){
            window.location = "homepage.jsp";
