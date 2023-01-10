@@ -46,4 +46,9 @@ public class UserController {
 		
 		return "redirect:/user/register";
 	}
+	
+	@GetMapping("/details")
+	public String userDetails(Model theModel) {
+		return "user-details";
+	}
 }

@@ -28,7 +28,7 @@
 				</tr>
 
 				<c:forEach var="user" items="${users}">
-					<tr>
+					<tr class="clickable" onclick="window.location='http://localhost/EDWebApplication/user/details'">
 						<td>${user.firstName}</td>
 						<td>${user.surname}</td>
 					</tr>
