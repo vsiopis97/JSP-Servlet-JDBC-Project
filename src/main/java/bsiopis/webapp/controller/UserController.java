@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import bsiopis.webapp.entity.*;
 import bsiopis.webapp.service.UserService;
@@ -48,7 +49,13 @@ public class UserController {
 	}
 	
 	@GetMapping("/details")
-	public String userDetails(Model theModel) {
+	public String userDetails(@RequestParam("userId") int Id, Model theModel) {
+
+		User user = userService.getUser(Id);
+		
+		theModel.addAttribute("user", user);
+		
 		return "user-details";
 	}
+
 }
