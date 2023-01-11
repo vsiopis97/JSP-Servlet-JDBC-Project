@@ -1,3 +1,6 @@
+CREATE DATABASE webApp;
+use webApp;
+
 CREATE TABLE `address` (
   `id` int NOT NULL AUTO_INCREMENT,
   `home_address` varchar(50) DEFAULT NULL,
@@ -7,10 +10,10 @@ CREATE TABLE `address` (
 
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `firstName` varchar(30) DEFAULT NULL,
-  `surname` varchar(30) DEFAULT NULL,
-  `gender` varchar(1) DEFAULT NULL,
-  `birthdate` varchar(15) DEFAULT NULL,
+  `firstName` varchar(30) NOT NULL,
+  `surname` varchar(30) NOT NULL,
+  `gender` varchar(1) NOT NULL,
+  `birthdate` varchar(15) NOT NULL,
   `address_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FKodbgs3aask81yukws94tijx0c` (`address_id`)

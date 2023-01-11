@@ -5,10 +5,13 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +27,14 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
+	@InitBinder
+	public void initBinder(WebDataBinder dataBinder) {
+
+		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
+
+		dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
+	}
+
 	@GetMapping("/list")
 	public String listUser(Model theModel) {
 
@@ -33,47 +44,44 @@ public class UserController {
 
 		return "list-users";
 	}
-	
+
 	@GetMapping("/register")
-	public String register(Model theModel){
-		
+	public String register(Model theModel) {
+
 		User user = new User();
-		theModel.addAttribute("user",user);
-		
+		theModel.addAttribute("user", user);
+
 		return "register";
 	}
-	
+
 	@PostMapping("/saveUser")
-	public String saveUser(@Valid @ModelAttribute("user") UserInput user, BindingResult bindingResult){
-		if(bindingResult.hasErrors()) {
+	public String saveUser(@Valid @ModelAttribute("user") UserInput user, BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
 			return "register";
-		}
-		else {
+		} else {
 			userService.saveUser(user);
-			
+
 			return "success";
-		}    
+		}
 	}
-	
+
 	@GetMapping("/details")
 	public String userDetails(@RequestParam("userId") int Id, Model theModel) {
 
 		User user = userService.getUser(Id);
-		
+
 		theModel.addAttribute("user", user);
-		
+
 		return "user-details";
 	}
-	
+
 	@GetMapping("/search")
-    public String searchUsers(@RequestParam("searchName") String searchName,
-                                    Model theModel) {
-        // search customers from the service
-        List<User> users = userService.searchUsers(searchName);
-                
-        // add the customers to the model
-        theModel.addAttribute("users", users);
-        return "list-users";        
-    }
+	public String searchUsers(@RequestParam("searchName") String searchName, Model theModel) {
+
+		List<User> users = userService.searchUsers(searchName);
+
+		theModel.addAttribute("users", users);
+		return "list-users";
+	}
 
 }

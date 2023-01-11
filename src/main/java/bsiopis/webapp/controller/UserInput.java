@@ -6,10 +6,10 @@ import javax.validation.constraints.Size;
 public class UserInput {
 
 	@NotNull(message="is required!")
-	@Size(min=1, max=30, message="between 1 and 30 characters!")
+	@Size(min=1, max=30, message="required, 1-30 characters!")
 	private String firstName;
 	@NotNull(message="is required!")
-	@Size(min=1, max=30, message="between 1 and 30 characters!")
+	@Size(min=1, max=30, message="required, 1-30 characters!")
 	private String surname;
 	@NotNull(message="is required!")
 	@Size(min=1, message="is required!")
