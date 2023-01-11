@@ -11,5 +11,7 @@ public interface UserDAO {
 
 	public User getUser(int Id);
 
+	public List<User> searchUsers(String searchName);
+
 
 }

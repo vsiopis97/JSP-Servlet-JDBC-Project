@@ -12,4 +12,6 @@ public interface UserService {
 	public void saveUser(UserInput user);
 
 	public User getUser(int Id);
+
+	public List<User> searchUsers(String searchName);
 }

@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 
 <html>
@@ -18,9 +18,15 @@
 				<h2>List of Users</h2>
 			</div>
 		</div>
-
+		<br>
+		<form:form action="search" method="GET">
+                Search user: <input type="text" name="searchName" />
+			<input type="submit" value="Search" />
+			<input type="button" value="Reset List" onclick="window.location.href = 'http://localhost/EDWebApplication/user/list'" />
+		</form:form>
 		<div id="container">
 			<div id="content">
+
 				<table>
 					<tr>
 						<th>First Name</th>

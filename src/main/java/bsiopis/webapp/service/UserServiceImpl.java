@@ -47,4 +47,10 @@ public class UserServiceImpl implements UserService {
 		return userDAO.getUser(Id);
 	}
 
+	@Override
+    @Transactional
+    public List<User> searchUsers(String searchName) {
+        return userDAO.searchUsers(searchName);
+    }
+
 }

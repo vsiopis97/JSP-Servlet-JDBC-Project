@@ -58,6 +58,15 @@ public class UserController {
 		return "user-details";
 	}
 	
-	
+	@GetMapping("/search")
+    public String searchUsers(@RequestParam("searchName") String searchName,
+                                    Model theModel) {
+        // search customers from the service
+        List<User> users = userService.searchUsers(searchName);
+                
+        // add the customers to the model
+        theModel.addAttribute("users", users);
+        return "list-users";        
+    }
 
 }

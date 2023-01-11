@@ -40,4 +40,26 @@ public class UserDAOImpl implements UserDAO {
 		return user;
 	}
 
+	@Override
+	public List<User> searchUsers(String searchName) {
+        Session currentSession = sessionFactory.getCurrentSession();
+        
+        Query theQuery = null;
+        
+        if (searchName != null && searchName.trim().length() > 0) {
+            theQuery =currentSession.createQuery("from User where lower(firstName) like :name or lower(surname) like :name", User.class);
+            theQuery.setParameter("name", "%" + searchName.toLowerCase() + "%");
+        }
+        else {
+            theQuery =currentSession.createQuery("from User", User.class);            
+        }
+        
+        // execute query and get result list
+        List<User> users = theQuery.getResultList();
+                
+        // return the results        
+        return users;
+        
+    }
+
 }
