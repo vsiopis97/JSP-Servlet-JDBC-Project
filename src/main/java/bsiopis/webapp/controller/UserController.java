@@ -41,7 +41,7 @@ public class UserController {
 	}
 	
 	@PostMapping("/saveUser")
-	public String saveUser(@ModelAttribute("user") UserDTO user){
+	public String saveUser(@ModelAttribute("user") UserInput user){
 		
 	    userService.saveUser(user);
 		

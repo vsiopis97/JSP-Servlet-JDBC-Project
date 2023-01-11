@@ -1,6 +1,6 @@
 package bsiopis.webapp.controller;
 
-public class UserDTO {
+public class UserInput {
 
 	private String firstName;
 	private String surname;
@@ -9,7 +9,7 @@ public class UserDTO {
 	private String workAddress;
 	private String homeAddress;
 	
-	public UserDTO() {
+	public UserInput() {
 		super();
 	}
 

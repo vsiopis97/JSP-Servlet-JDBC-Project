@@ -8,7 +8,7 @@
 <title>Display Users</title>
 
 <link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/style.css">
+	href="${pageContext.request.contextPath}/resources/css/list-users.css">
 </head>
 
 <body>
@@ -45,13 +45,13 @@
 		</div>
 
 		<br>
+		<div style=""></div>
 
+		<p>
+			<a href="${pageContext.request.contextPath}">Back to Home</a>
+		</p>
 	</div>
-	<div style=""></div>
 
-	<p>
-		<a href="${pageContext.request.contextPath}">Back to Home</a>
-	</p>
 </body>
 
 </html>

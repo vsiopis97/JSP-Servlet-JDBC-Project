@@ -8,7 +8,7 @@
 <title>User Details</title>
 
 <link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/style2.css">
+	href="${pageContext.request.contextPath}/resources/css/user-details.css">
 </head>
 
 <body>

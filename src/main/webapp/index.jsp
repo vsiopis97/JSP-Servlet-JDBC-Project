@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Homepage</title>
 <link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/style3.css">
+	href="${pageContext.request.contextPath}/resources/css/home.css">
 </head>
 <body>
 	<div align="center">

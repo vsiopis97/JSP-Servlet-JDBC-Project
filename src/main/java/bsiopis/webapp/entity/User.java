@@ -10,31 +10,24 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import org.springframework.lang.NonNull;
-
 @Entity
 @Table(name = "users")
 public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@NonNull
 	@Column(name = "id")
 	private int id;
 
-	@NonNull
 	@Column(name = "firstName")
 	private String firstName;
 
-	@NonNull
 	@Column(name = "surname")
 	private String surname;
 
-	@NonNull
 	@Column(name = "gender")
 	private String gender;
 
-	@NonNull
 	@Column(name = "birthdate")
 	private String birthdate;
 

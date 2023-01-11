@@ -6,12 +6,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Register New User</title>
-
+<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/register.css">
 </head>
 <body>
 	<div align="center">
-		<p>Please fill all the mandatory fields before submitting.</p>
-
+		<div id="wrapper">
+			<div id="header">
+				<h2>Registration Form</h2>
+			</div>
+		</div>
+		<br>
+		<p>
+			<strong>Please fill all mandatory fields (Name, Surname,
+				Gender, Birthdate) before submitting</strong>
+		</p>
+		<br>
 		<form:form action="saveUser" modelAttribute="user" method="POST">
 
 			<table>
@@ -20,12 +30,12 @@
 
 					<tr>
 						<td>Name:</td>
-						<td><input type="text" name="firstName" value="" size="50"
+						<td><input type="text" name="firstName" value="" size="20"
 							required /></td>
 					</tr>
 					<tr>
 						<td>Surname:</td>
-						<td><input type="text" name="surname" value="" size="50"
+						<td><input type="text" name="surname" value="" size="20"
 							required /></td>
 					</tr>
 					<tr>
@@ -39,7 +49,7 @@
 
 					<tr>
 						<td>Birthdate:</td>
-						<td><input type="date" name="birthdate" value="" size="50"
+						<td><input type="date" name="birthdate" value="" size="20"
 							required /></td>
 					</tr>
 					<tr>
@@ -56,10 +66,10 @@
 
 			</table>
 
-			<input type="submit" name="Submit" value="Submit">
+			<input type="submit" name="Submit" value="Submit" class="button">
 		</form:form>
 
-		<div style="clear; both;"></div>
+		<div style=""></div>
 
 		<p>
 			<a href="${pageContext.request.contextPath}">Back to Home</a>
