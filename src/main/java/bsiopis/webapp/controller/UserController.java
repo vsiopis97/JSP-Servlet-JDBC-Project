@@ -45,7 +45,7 @@ public class UserController {
 		
 	    userService.saveUser(user);
 		
-		return "redirect:/user/register";
+		return "success";
 	}
 	
 	@GetMapping("/details")
@@ -57,5 +57,7 @@ public class UserController {
 		
 		return "user-details";
 	}
+	
+	
 
 }
