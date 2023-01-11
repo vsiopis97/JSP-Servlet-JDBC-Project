@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "users")
@@ -20,15 +22,23 @@ public class User {
 	private int id;
 
 	@Column(name = "firstName")
+	@NotNull(message="is required!")
+	@Size(min=1, max=30, message="between 1 and 30 characters!")
 	private String firstName;
 
 	@Column(name = "surname")
+	@NotNull(message="is required!")
+	@Size(min=1, max=30, message="between 1 and 30 characters!")
 	private String surname;
 
 	@Column(name = "gender")
+	@NotNull(message="is required!")
+	@Size(min=1, message="is required!")
 	private String gender;
 
 	@Column(name = "birthdate")
+	@NotNull(message="is required!")
+	@Size(min=1, message="is required!")
 	private String birthdate;
 
 	@OneToOne(cascade = CascadeType.ALL)

@@ -1,10 +1,21 @@
 package bsiopis.webapp.controller;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class UserInput {
 
+	@NotNull(message="is required!")
+	@Size(min=1, max=30, message="between 1 and 30 characters!")
 	private String firstName;
+	@NotNull(message="is required!")
+	@Size(min=1, max=30, message="between 1 and 30 characters!")
 	private String surname;
+	@NotNull(message="is required!")
+	@Size(min=1, message="is required!")
 	private String gender;
+	@NotNull(message="is required!")
+	@Size(min=1, message="is required!")
 	private String birthdate;
 	private String workAddress;
 	private String homeAddress;

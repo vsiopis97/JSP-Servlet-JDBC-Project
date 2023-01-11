@@ -40,6 +40,7 @@ public class UserDAOImpl implements UserDAO {
 		return user;
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public List<User> searchUsers(String searchName) {
         Session currentSession = sessionFactory.getCurrentSession();

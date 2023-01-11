@@ -18,8 +18,8 @@
 		</div>
 		<br>
 		<p>
-			<strong>Please fill all mandatory fields (Name, Surname,
-				Gender, Birthdate) before submitting</strong>
+			<strong>Please fill all mandatory fields before submitting <i>(*
+					is mandatory)</i></strong>
 		</p>
 		<br>
 		<form:form action="saveUser" modelAttribute="user" method="POST">
@@ -29,36 +29,36 @@
 				<tbody>
 
 					<tr>
-						<td>Name:</td>
-						<td><input type="text" name="firstName" value="" size="20"
-							required /></td>
+						<td><strong>First Name*</strong></td>
+						<td><input type="text" name="firstName" value="" size="35" />
+							<form:errors path="firstName" cssClass="error" /></td>
 					</tr>
 					<tr>
-						<td>Surname:</td>
-						<td><input type="text" name="surname" value="" size="20"
-							required /></td>
+						<td><strong>Surname*</strong></td>
+						<td><input type="text" name="surname" value="" size="35" />
+							<form:errors path="surname" cssClass="error" /></td>
 					</tr>
 					<tr>
-						<td>Gender:</td>
-						<td><select name="gender" required>
+						<td><strong>Gender*</strong></td>
+						<td><select name="gender">
 								<option value="">--Please select a category--</option>
 								<option value="M">M</option>
 								<option value="F">F</option>
-						</select></td>
+						</select> <form:errors path="gender" cssClass="error" /></td>
 					</tr>
 
 					<tr>
-						<td>Birthdate:</td>
-						<td><input type="date" name="birthdate" value="" size="20"
-							required /></td>
+						<td><strong>Birthdate*</strong></td>
+						<td><input type="date" name="birthdate" value="" size="20" />
+							<form:errors path="birthdate" cssClass="error" /></td>
 					</tr>
 					<tr>
-						<td>Work Address:</td>
+						<td><strong>Work Address</strong></td>
 						<td><textarea name="workAddress"></textarea></td>
 					</tr>
 
 					<tr>
-						<td>Home Address:</td>
+						<td><strong>Home Address</strong></td>
 						<td><textarea name="homeAddress"></textarea></td>
 					</tr>
 
@@ -67,6 +67,8 @@
 			</table>
 
 			<input type="submit" name="Submit" value="Submit" class="button">
+
+
 		</form:form>
 
 		<div style=""></div>

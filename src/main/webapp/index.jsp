@@ -17,8 +17,10 @@
 			</div>
 		</div>
 		<br> <br>
-		<p>Please click a button to redirect you to the page you wish to
-			go to:</p>
+		<p>
+			<strong>Please click a button to redirect you to the page
+				you wish to go to:</strong>
+		</p>
 		<br> <br>
 		<form>
 			<input type="button" value="Register New User "

@@ -4,6 +4,8 @@ html, body{
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 }
 
+.error{color:red}
+
 .button {
   background-color: #8000ff;
   border: none;

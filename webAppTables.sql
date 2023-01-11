@@ -1,9 +1,9 @@
 CREATE TABLE `address` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `home_address` varchar(255) DEFAULT NULL,
-  `work_address` varchar(255) DEFAULT NULL,
+  `home_address` varchar(50) DEFAULT NULL,
+  `work_address` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,

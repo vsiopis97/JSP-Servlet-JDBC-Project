@@ -9,12 +9,12 @@
 </head>
 <body>
 	<div align="center">
-	User successfully registered!
-	<div style=""></div>
+		User successfully registered!
+		<div style=""></div>
 
-	<p>
-		<a href="${pageContext.request.contextPath}">Back to Home</a>
-	</p>
+		<p>
+			<a href="${pageContext.request.contextPath}">Back to Home</a>
+		</p>
 	</div>
 </body>
 </html>
