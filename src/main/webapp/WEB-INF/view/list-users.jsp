@@ -12,35 +12,41 @@
 </head>
 
 <body>
-
-	<div id="wrapper">
-		<div id="header">
-			<h2>List of Users</h2>
+	<div align="center">
+		<div id="wrapper">
+			<div id="header">
+				<h2>List of Users</h2>
+			</div>
 		</div>
-	</div>
 
-	<div id="container">
-		<div id="content">
-			<table>
-				<tr>
-					<th>First Name</th>
-					<th>Surname</th>
-				</tr>
-
-				<c:forEach var="user" items="${users}">
-				
-				    <c:url var="userDetailsLink" value="/user/details">
-				    <c:param name="userId" value="${user.id}"/>
-				    </c:url>
-					<tr class="clickable" onclick="window.location='${userDetailsLink}'">
-						<td>${user.firstName}</td>
-						<td>${user.surname}</td>
+		<div id="container">
+			<div id="content">
+				<table>
+					<tr>
+						<th>First Name</th>
+						<th>Surname</th>
+						<th>Details</th>
 					</tr>
-				</c:forEach>
-			</table>
+
+					<c:forEach var="user" items="${users}">
+
+						<c:url var="userDetailsLink" value="/user/details">
+							<c:param name="userId" value="${user.id}" />
+						</c:url>
+						<tr>
+							<td>${user.firstName}</td>
+							<td>${user.surname}</td>
+							<td><a href="${userDetailsLink}" target="_blank"
+								rel="noopener noreferrer">Show more</a></td>
+						</tr>
+					</c:forEach>
+				</table>
+			</div>
 		</div>
+
+		<br>
+
 	</div>
-	<br>
 	<div style=""></div>
 
 	<p>

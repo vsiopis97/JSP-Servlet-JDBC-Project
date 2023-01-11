@@ -21,7 +21,7 @@
 
 	<div id="container">
 		<div id="content">
-			<form:form action="" modelAttribute="user" method="POST">
+			<form:form action="" modelAttribute="user" method="POST"></form:form>
 				<table>
 					<tr>
 						<th>First Name</th>
@@ -42,7 +42,7 @@
 					</tr>
 				</table>
 		</div>
-		</form:form>
+		
 	</div>
 </body>
 
