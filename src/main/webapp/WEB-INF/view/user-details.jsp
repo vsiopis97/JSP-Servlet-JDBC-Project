@@ -12,16 +12,16 @@
 </head>
 
 <body>
-
-	<div id="wrapper">
-		<div id="header">
-			<h2>Chosen user: ${user.firstName} ${user.surname}</h2>
+	<div align="center">
+		<div id="wrapper">
+			<div id="header">
+				<h2>Chosen user: ${user.firstName} ${user.surname}</h2>
+			</div>
 		</div>
-	</div>
 
-	<div id="container">
-		<div id="content">
-			<form:form action="" modelAttribute="user" method="POST"></form:form>
+		<div id="container">
+			<div id="content">
+				<form:form action="" modelAttribute="user" method="POST"></form:form>
 				<table>
 					<tr>
 						<th>First Name</th>
@@ -41,8 +41,9 @@
 						<td>${user.address.homeAddress}</td>
 					</tr>
 				</table>
+			</div>
+
 		</div>
-		
 	</div>
 </body>
 

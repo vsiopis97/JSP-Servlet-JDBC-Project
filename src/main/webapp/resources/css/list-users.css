@@ -22,6 +22,11 @@ tr {
 	border-top:1px solid gray;
 	text-align:center;	
 }
+
+tr:hover{
+	background-color: #8000ff;
+	cursor: pointer;
+}
  
 #wrapper {width: 100%; margin-top: 0px; }
 #header {width: 70%; background: #8000ff; margin-top: 0px; padding:15px 0px 15px 15px;}
