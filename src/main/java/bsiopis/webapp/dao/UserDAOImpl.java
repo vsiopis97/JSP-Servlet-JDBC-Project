@@ -26,7 +26,7 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public void saveUser(User user) {
-		
+
 		Session session = sessionFactory.getCurrentSession();
 		session.save(user);
 	}
@@ -34,33 +34,31 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public User getUser(int Id) {
 		Session session = sessionFactory.getCurrentSession();
-		
+
 		User user = session.get(User.class, Id);
-		
+
 		return user;
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public List<User> searchUsers(String searchName) {
-        Session currentSession = sessionFactory.getCurrentSession();
-        
-        Query theQuery = null;
-        
-        if (searchName != null && searchName.trim().length() > 0) {
-            theQuery =currentSession.createQuery("from User where lower(firstName) like :name or lower(surname) like :name", User.class);
-            theQuery.setParameter("name", "%" + searchName.toLowerCase() + "%");
-        }
-        else {
-            theQuery =currentSession.createQuery("from User", User.class);            
-        }
-        
-        // execute query and get result list
-        List<User> users = theQuery.getResultList();
-                
-        // return the results        
-        return users;
-        
-    }
+		Session currentSession = sessionFactory.getCurrentSession();
+
+		Query theQuery = null;
+
+		if (searchName != null && searchName.trim().length() > 0) {
+			theQuery = currentSession.createQuery(
+					"from User where lower(firstName) like :name or lower(surname) like :name", User.class);
+			theQuery.setParameter("name", "%" + searchName.toLowerCase() + "%");
+		} else {
+			theQuery = currentSession.createQuery("from User", User.class);
+		}
+
+		List<User> users = theQuery.getResultList();
+
+		return users;
+
+	}
 
 }

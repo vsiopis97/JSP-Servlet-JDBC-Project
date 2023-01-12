@@ -7,6 +7,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * <h1>Address Entity Class</h1> 
+ * The secondaryEntity class of the application, it
+ * consists of the two non-mandatory address values of the user. Connects with the
+ * database columns via Hibernate annotations.
+ * It is mapped to the User Entity via One-to-One mapping.
+ * 
+ * @author Bill Siopis
+ * @version 1.0
+ * @since 2022-12-15
+ * 
+ */
+
 @Entity
 @Table(name = "address")
 public class Address {

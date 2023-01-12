@@ -23,7 +23,7 @@
                 Search user: <input type="text" name="searchName" />
 			<input type="submit" value="Search" />
 			<input type="button" value="Reset List"
-				onclick="window.location.href = 'http://localhost/EDWebApplication/user/list'" />
+				onclick="window.location.href = '/EDWebApplication/user/list'"/>
 		</form:form>
 		<div id="container">
 			<div id="content">

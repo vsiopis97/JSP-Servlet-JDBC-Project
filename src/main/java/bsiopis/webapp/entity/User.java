@@ -12,6 +12,18 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+/**
+ * <h1>User Entity Class</h1> 
+ * The base Entity class of the application, it
+ * consists of all the fields that store the data of the user. Connects with the
+ * database columns via Hibernate annotations.
+ * Also includes One-to-One mapping with the Address Entity.
+ * 
+ * @author Bill Siopis
+ * @version 1.0
+ * @since 2022-12-15
+ * 
+ */
 @Entity
 @Table(name = "users")
 public class User {
@@ -22,23 +34,23 @@ public class User {
 	private int id;
 
 	@Column(name = "firstName")
-	@NotNull(message="is required!")
-	@Size(min=1, max=30, message="required, 1-30 characters!")
+	@NotNull(message = "is required!")
+	@Size(min = 1, max = 30, message = "required, 1-30 characters!")
 	private String firstName;
 
 	@Column(name = "surname")
-	@NotNull(message="is required!")
-	@Size(min=1, max=30, message="required, 1-30 characters!")
+	@NotNull(message = "is required!")
+	@Size(min = 1, max = 30, message = "required, 1-30 characters!")
 	private String surname;
 
 	@Column(name = "gender")
-	@NotNull(message="is required!")
-	@Size(min=1, message="is required!")
+	@NotNull(message = "is required!")
+	@Size(min = 1, message = "is required!")
 	private String gender;
 
 	@Column(name = "birthdate")
-	@NotNull(message="is required!")
-	@Size(min=1, message="is required!")
+	@NotNull(message = "is required!")
+	@Size(min = 1, message = "is required!")
 	private String birthdate;
 
 	@OneToOne(cascade = CascadeType.ALL)
