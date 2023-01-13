@@ -27,7 +27,7 @@
 						<th>First Name</th>
 						<th>Surname</th>
 						<th>Gender</th>
-						<th>Birthdate</th>
+						<th>Date of Birth</th>
 						<th>Work Address</th>
 						<th>Home Address</th>
 					</tr>

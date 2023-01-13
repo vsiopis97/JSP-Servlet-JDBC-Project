@@ -48,7 +48,7 @@
 					</tr>
 
 					<tr>
-						<td><strong>Birthdate*</strong></td>
+						<td><strong>Date of Birth*</strong></td>
 						<td><input type="date" name="birthdate" value="" size="20" />
 							<form:errors path="birthdate" cssClass="error" /></td>
 					</tr>

@@ -22,7 +22,7 @@ import bsiopis.webapp.service.UserService;
 
 /**
  * 
- * <h1>User Controller</h1> Self explanatory. The main class of the entire web
+ * User Controller. Self explanatory. The main class of the entire web
  * application. User Controller class contains the mapping to all the pages of
  * the web application which are used to control the user objects.
  * 
@@ -35,6 +35,9 @@ import bsiopis.webapp.service.UserService;
 @RequestMapping("/user")
 public class UserController {
 
+	/**
+	 * Initiation of a User Service object to pass the user input into.
+	 */
 	@Autowired
 	private UserService userService;
 
@@ -58,9 +61,9 @@ public class UserController {
 	 * listUser method is responsible for calling the Service method getUser() to
 	 * create a list of the users stored in the database.
 	 * 
-	 * @param theModel is used as a container for data. We use its Model interface
-	 *                 functions to pass data into the jsp the function is mapped
-	 *                 to.
+	 * @param theModel is used as a container for data. The Model interface
+	 *                 functions are used to pass data into the jsp the function is
+	 *                 mapped to.
 	 * @return Returns the list-users.jsp page address.
 	 * 
 	 */
@@ -79,9 +82,9 @@ public class UserController {
 	 * input will be saved to and returning to the registration page for it to be
 	 * saved.
 	 * 
-	 * @param theModel is used as a container for data. We use its Model interface
-	 *                 functions to pass data into the jsp the function is mapped
-	 *                 to.
+	 * @param theModel is used as a container for data. The Model interface
+	 *                 functions are used to pass data into the jsp the function is
+	 *                 mapped to.
 	 * @return Returns the register.jsp page address.
 	 */
 	@GetMapping("/register")
@@ -102,8 +105,7 @@ public class UserController {
 	 * @param user          The user input stored in a UserInput temp object in
 	 *                      order to pass all the values correctly.
 	 * @param bindingResult is the variable that holds any possible errors in the
-	 *                      validation in order for us to check them with that if
-	 *                      function.
+	 *                      validation in order be checked with an if function.
 	 * @return Returns the address to the success.jsp if there are no errors in the
 	 *         submitted data.
 	 */
@@ -123,12 +125,12 @@ public class UserController {
 	 * userDetails method is used to call the method getUser() from the Service
 	 * layer with an input of a userId to find a specific record.
 	 * 
-	 * @param Id       we get the value of a user ID via a @RequestParam annotation
-	 *                 and pass it in the method in order to search for a record
-	 *                 with that id number.
-	 * @param theModel is used as a container for data. We use its Model interface
-	 *                 functions to pass data into the jsp the function is mapped
-	 *                 to.
+	 * @param Id       A value of a user ID is obtained via a @RequestParam
+	 *                 annotation and passed in the method in order to search for a
+	 *                 record with that id number.
+	 * @param theModel is used as a container for data. The Model interface
+	 *                 functions are used to pass data into the jsp the function is
+	 *                 mapped to.
 	 * @return Returns the user-details.jsp page address.
 	 */
 	@GetMapping("/details")
@@ -147,15 +149,16 @@ public class UserController {
 	 * Layer passing through a searchName variable given by user input.
 	 * 
 	 * @param searchName is the variable gained by user input via the @RequestParam
-	 *                   annotation. We use it to determine which users we search
-	 *                   for.
-	 * @param theModel   is used as a container for data. We use its Model interface
-	 *                   functions to pass data into the jsp the function is mapped
-	 *                   to.
+	 *                   annotation. It is used to determine which users are to be
+	 *                   searched for.
+	 * @param theModel   is used as a container for data. The Model interface
+	 *                   functions are used to pass data into the jsp the function
+	 *                   is mapped to.
 	 * @return Returns the list-users.jsp page address.
 	 */
 	@GetMapping("/search")
-	public String searchUsers(@RequestParam(value="searchName", defaultValue="") String searchName, Model theModel) {
+	public String searchUsers(@RequestParam(value = "searchName", defaultValue = "") String searchName,
+			Model theModel) {
 
 		List<User> users = userService.searchUsers(searchName);
 
