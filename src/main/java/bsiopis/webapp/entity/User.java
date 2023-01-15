@@ -191,7 +191,7 @@ public class User {
 	/**
 	 * Getter method of the address object parameter
 	 * 
-	 * @return returns the Adress table connection of the User object
+	 * @return returns the Address table connection of the User object
 	 */
 	public Address getAddress() {
 		return address;

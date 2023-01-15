@@ -24,7 +24,8 @@ import bsiopis.webapp.service.UserService;
  * 
  * User Controller. Self explanatory. The main class of the entire web
  * application. User Controller class contains the mapping to all the pages of
- * the web application which are used to control the user objects.
+ * the web application which are used to control the user objects. Whenever an
+ * HTTP Request is done on the web page it passes through this controller class.
  * 
  * @author Bill Siopis
  * @version 1.0
