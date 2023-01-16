@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"bsiopis.webapp.controller"},{"l":"bsiopis.webapp.dao"},{"l":"bsiopis.webapp.entity"},{"l":"bsiopis.webapp.rest"},{"l":"bsiopis.webapp.service"}];updateSearchResults();
